@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let ar = [];
+        let br = [];
+        let i = 0;
+        // Boolean function (){}
+        
+            document.getElementById("val").onclick = function () {isValid()};
+            function isValid(){
+            let user = document.getElementById("uname").value;
+            let passw = document.getElementById("pass").value;
+            let mail = document.getElementById('email').value;
+            if(user === null)
+                alert('Username should not be null');
+            if(passw.length() < 6)
+                alert('Password should be atleast 6 characters');
+            // if(mail.)
+            for(let x = 0; x <= ar.length; x++)
+            {
+                if(user === ar[x] && passw === br[x]){
+                    alert('User found');
+                    break;
+                }
+                else{
+                    ar[i] = user;
+                    br[i] = passw;
+                    i+=1;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="myform">
+        <label for="">Username : </label> <br>
+        <input type="text" id="uname" name="uname" placeholder="Username"> <br> <br>
+        <label for="">Email Id : </label> <br>
+        <input type="email" id="email" name="email" placeholder="Email"> <br> <br>
+        <label for="">Password : </label> <br>
+        <input type="password" name="pass" id="pass" placeholder="password"> <br> <br>
+        <button id="val"> submit </button>
+    </form>
+    
+</body>
+</html>
